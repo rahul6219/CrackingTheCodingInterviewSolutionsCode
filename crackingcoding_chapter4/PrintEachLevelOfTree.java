@@ -64,6 +64,8 @@ public class PrintEachLevelOfTree {
 		bst.add(90);
 		bst.add(50);
 		bst.inOrderPrint();
+		bst.printLevelOrderIteratively(bst.root);
+		bst.printLevelOrderUsingQueue(bst.root);
 
 	}
 
