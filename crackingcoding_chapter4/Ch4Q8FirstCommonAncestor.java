@@ -71,7 +71,10 @@ public class Ch4Q8FirstCommonAncestor {
 		root.right.right.left = new TreeNode(70);
 		root.right.right.right = new TreeNode(80);
 		
-		Ch4Q8FirstCommonAncestor
+		Ch4Q8FirstCommonAncestor obj= new Ch4Q8FirstCommonAncestor();
+		obj.FCA(root, 20, 80);
+		obj.FCA(root, 70, 50);
+		obj.FCA(root, 80, 30);
 	}
 
 }
