@@ -13,9 +13,11 @@ import java.util.ArrayList;
 public class Ch4Q12PathsWithSum {
 
 	private static ArrayList<Integer> aList;
+	private static int countPaths;
 
 	public Ch4Q12PathsWithSum() {
 		aList = new ArrayList<Integer>();
+		countPaths = 0;
 	}
 
 	public static void findAllPaths(TreeNode x, int desiredSum) {
@@ -35,11 +37,17 @@ public class Ch4Q12PathsWithSum {
 
 			if (sum == desiredSum) {
 				printDesiredSum(aList, i);
+				countPaths++;
 			}
 		}
 
 		aList.remove(aList.size() - 1);
 
+	}
+
+	public static void pathCount() {
+		System.out.println();
+		System.out.println("Number of paths that exist: " + countPaths);
 	}
 
 	public static void printDesiredSum(ArrayList<Integer> aList2, int i) {
@@ -70,6 +78,7 @@ public class Ch4Q12PathsWithSum {
 		int desiredSum = 5;
 		Ch4Q12PathsWithSum a = new Ch4Q12PathsWithSum();
 		a.findAllPaths(root, desiredSum);
+		pathCount();
 
 	}
 
